@@ -11,13 +11,44 @@ namespace WebApplication1.Properties.Controllers
     [ApiController]
     public class ConsultarDatos : Controller
     {
-        [HttpGet("{id}")]
-        public string Get(String city)
+        [HttpGet("{city}")]
+        public IActionResult Get(String city)
         {
-            return city switch
+            if (city == "Cali")
             {
-                
-            };
+                return Ok(
+                        new object[]
+                        {
+                            new{ Temp = 50 }
+                        }
+                    );
+            }else if(city == "Ibague")
+            {
+                return Ok(
+                        new object[]
+                        {
+                            new{ Temp = 60 }
+                        }
+                    );
+             }
+            else if (city == "New York")
+            {
+                return Ok(
+                        new object[]
+                        {
+                            new{ Temp = 70 }
+                        }
+                    );
+            }
+            else
+            {
+                return Ok(
+                        new object[]
+                        {
+                            new{ Temp = 80 }
+                        }
+                    );
+            }
         }
     }
 }
