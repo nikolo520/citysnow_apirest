@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace citysnow_apirest
+namespace apirest_webapp
 {
     public class Program
     {
